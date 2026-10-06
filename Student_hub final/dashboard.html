@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard — CHARUSAT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">CHARUSAT</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="students.html">Students</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="sitemap.html">Site Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-section">
+      <h2>Student Dashboard</h2>
+      <p class="subtitle">Welcome to your central campus portal summary and real-time activity center.</p>
+    </div>
+
+    <!-- Practical 6: Live Dynamic Metrics loaded via Fetch API -->
+    <section class="stats-summary-grid mb-20">
+      <div class="card stat-card">
+        <span class="stat-icon">🎓</span>
+        <div class="stat-info">
+          <h3 id="dashTotalStudents">--</h3>
+          <p>Enrolled Students</p>
+        </div>
+        <a href="students.html" class="stat-link">Browse Profiles &rarr;</a>
+      </div>
+
+      <div class="card stat-card">
+        <span class="stat-icon">📅</span>
+        <div class="stat-info">
+          <h3 id="dashTotalEvents">--</h3>
+          <p>Campus Events</p>
+        </div>
+        <a href="events.html" class="stat-link">View All Events &rarr;</a>
+      </div>
+
+      <div class="card stat-card">
+        <span class="stat-icon">❓</span>
+        <div class="stat-info">
+          <h3 id="dashTotalFaqs">--</h3>
+          <p>Help Articles & FAQs</p>
+        </div>
+        <a href="faq.html" class="stat-link">Explore FAQs &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Standard Dashboard Grid (Notifications & Quick Links) -->
+    <div class="dashboard-grid mb-20">
+      <section class="card">
+        <h4>📢 Notifications</h4>
+        <ul>
+          <li>Semester registration open for Academic Year 2026-27.</li>
+          <li>Placement season begins with 120+ visiting recruiters.</li>
+          <li>TechFest 2026 registrations now open in <a href="events.html">Events</a>.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h4>🔗 Quick Navigation</h4>
+        <ul>
+          <li><a href="students.html">Students Directory (Practical 6)</a></li>
+          <li><a href="events.html">Events Calendar (Practical 6)</a></li>
+          <li><a href="faq.html">University FAQs (Practical 6)</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="feedback.html">Submit Feedback</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Dynamic Section: Top Upcoming Events preview loaded via Fetch API -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3>📅 Featured Upcoming Events</h3>
+        <a href="events.html" class="btn btn-sm btn-outline">View All Events</a>
+      </div>
+      <div id="dashEventsPreview" class="events-preview-grid">
+        <p class="loading-text">Loading events preview...</p>
+      </div>
+    </section>
+
+    <!-- Dynamic Section: Top Performing Students preview loaded via Fetch API -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3>⭐ Top Performing Scholars</h3>
+        <a href="students.html" class="btn btn-sm btn-outline">View All Students</a>
+      </div>
+      <div id="dashStudentsPreview" class="students-preview-grid">
+        <p class="loading-text">Loading scholars preview...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Student portal dashboard — CHARUSAT</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

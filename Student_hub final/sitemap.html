@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Site Map — CHARUSAT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">CHARUSAT</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="students.html">Students</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="sitemap.html" class="active">Site Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-section">
+      <h2>Portal Site Map</h2>
+      <p class="subtitle">Complete hierarchical overview of all pages across the student portal.</p>
+    </div>
+
+    <section class="card mb-20">
+      <h3>🏛️ Main Information Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a> &mdash; University introduction, highlights, and dynamic events feed.</li>
+        <li><a href="about.html">About</a> &mdash; Institutional details, leadership, and academic programs.</li>
+        <li><a href="contact.html">Contact</a> &mdash; Campus locations, admissions contact info, and inquiry form.</li>
+        <li><a href="faq.html">FAQ (Practical 6)</a> &mdash; University FAQs dynamically rendered from <code>faqs.json</code> with search and accordion filter.</li>
+      </ul>
+    </section>
+
+    <section class="card mb-20">
+      <h3>🎓 Dynamic Practical 6 Data Modules</h3>
+      <ul>
+        <li><a href="events.html">Events Directory</a> &mdash; Dynamic event cards rendered from <code>events.json</code> with live search, category filter, sorting, and pagination.</li>
+        <li><a href="students.html">Student Profiles Directory</a> &mdash; Dynamic student cards from <code>students.json</code> featuring <strong>Intermediate Dependent Location Dropdowns (Country &rarr; State &rarr; City)</strong> and CGPA sorting.</li>
+        <li><a href="dashboard.html">Dashboard</a> &mdash; Aggregated real-time metrics and dynamic preview cards fetched via Fetch API.</li>
+      </ul>
+    </section>
+
+    <section class="card mb-20">
+      <h3>👤 Student & Account Services</h3>
+      <ul>
+        <li><a href="profile.html">Profile</a> &mdash; Individual student profile information.</li>
+        <li><a href="feedback.html">Feedback</a> &mdash; Student suggestions and grievance form.</li>
+        <li><a href="login.html">Login</a> &mdash; Student and faculty authentication portal.</li>
+        <li><a href="register.html">Register (Practical 5)</a> &mdash; Account registration form with real-time field validation and password strength indicator.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Site map for the CHARUSAT portal • Practical 6</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
