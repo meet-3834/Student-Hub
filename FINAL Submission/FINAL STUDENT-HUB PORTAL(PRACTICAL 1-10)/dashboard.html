@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard — CHARUSAT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">CHARUSAT</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="students.html">Students</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="sitemap.html">Site Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-section">
+      <div class="section-header-flex">
+        <div>
+          <h2>Campus Interactive Dashboard</h2>
+          <p class="subtitle">
+            <strong>Practical 4:</strong> Dynamic DOM Interactivity &amp; Modal Popup | <strong>Practical 6:</strong> Real-time Metrics &amp; Spotlights via Fetch API
+          </p>
+        </div>
+        <div>
+          <a href="login.php" class="btn btn-outline btn-sm">🔒 Portal Account Login</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Practical 6: Live Aggregated Metrics -->
+    <section class="stats-summary-grid mb-20">
+      <div class="card stat-card">
+        <div class="stat-icon">🎓</div>
+        <div class="stat-info">
+          <h3 id="dashTotalStudents">16+</h3>
+          <p>Enrolled Scholars</p>
+        </div>
+        <a href="students.html" class="stat-link">Directory &rarr;</a>
+      </div>
+
+      <div class="card stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-info">
+          <h3 id="dashTotalEvents">16</h3>
+          <p>Campus Events</p>
+        </div>
+        <a href="events.html" class="stat-link">Schedule &rarr;</a>
+      </div>
+
+      <div class="card stat-card">
+        <div class="stat-icon">❓</div>
+        <div class="stat-info">
+          <h3 id="dashTotalFaqs">16</h3>
+          <p>Help Topics &amp; FAQs</p>
+        </div>
+        <a href="faq.html" class="stat-link">Knowledgebase &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Practical 4: Interactive Dashboard Grid (Triggers Modal Popup Button) -->
+    <div class="dashboard-grid">
+      <!-- Left Column: Upcoming Events -->
+      <section class="card">
+        <div class="section-header-flex">
+          <h3 style="margin: 0;">📅 Upcoming Campus Events</h3>
+          <a href="events.html" style="font-size: 0.88rem;">View All &rarr;</a>
+        </div>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 4px;">Dynamic event cards fetched asynchronously from <code>events.json</code>.</p>
+        <div id="dashEventsPreview" class="stack" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <p class="loading-text">Loading upcoming events...</p>
+        </div>
+      </section>
+
+      <!-- Right Column: Top Scholars -->
+      <section class="card">
+        <div class="section-header-flex">
+          <h3 style="margin: 0;">⭐ Top Scholars Spotlight</h3>
+          <a href="students.html" style="font-size: 0.88rem;">View Directory &rarr;</a>
+        </div>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 4px;">Ranked dynamically by CGPA from <code>students.json</code>.</p>
+        <div id="dashStudentsPreview" class="stack" style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+          <p class="loading-text">Loading top scholars...</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Quick Navigation Bar -->
+    <section class="card mt-20" style="margin-top: 24px;">
+      <h3 style="margin-bottom: 12px;">🚀 Quick Coursework Navigation</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a href="index.html" class="btn btn-outline btn-sm">Practical 4: Home &amp; Slider</a>
+        <a href="register.html" class="btn btn-outline btn-sm">Practical 5: Registration &amp; CAPTCHA</a>
+        <a href="events.html" class="btn btn-outline btn-sm">Practical 6: Events Fetch API</a>
+        <a href="students.html" class="btn btn-outline btn-sm">Practical 6: Students &amp; Dropdowns</a>
+        <a href="faq.html" class="btn btn-outline btn-sm">Practical 6: Accordion FAQs</a>
+        <a href="contact.php" class="btn btn-outline btn-sm">Practical 7: PHP CSV/JSON Storage</a>
+        <a href="test_db.php" class="btn btn-outline btn-sm">Practical 8: MySQL Connection Test</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>CHARUSAT Interactive Dashboard • Practical 4 &amp; Practical 6 Implementation</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

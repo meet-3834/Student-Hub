@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Site Map — CHARUSAT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">CHARUSAT</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="students.html">Students</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="sitemap.html" class="active">Site Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-section">
+      <h2>Portal Site Map &amp; Practical Directory</h2>
+      <p class="subtitle">Complete hierarchical index showing each file and its corresponding lab practical.</p>
+    </div>
+
+    <!-- Practical 4 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🎨 Practical 4: JavaScript DOM Manipulation, Event Handling &amp; UI Interactivity</h3>
+        <span class="source-badge">Practical 4</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Dynamic UI components including theme toggle, notification banner, hamburger menu, slider, collapsible FAQ, and modal popup.</p>
+      <ul>
+        <li><a href="index.html">index.html (Home)</a> &mdash; Features the dynamic <strong>Content Slider</strong>, theme toggle, and notification banner.</li>
+        <li><a href="dashboard.html">dashboard.html (Dashboard)</a> &mdash; Central interactive dashboard featuring the dynamic <strong>Modal Popup ("View Important Update")</strong>.</li>
+        <li><a href="script.js">script.js</a> &mdash; Core DOM logic: <code>themeToggle</code> (stored in localStorage), <code>hamburger</code> menu, <code>notification-banner</code>, collapsible FAQ, modal popup, and slider.</li>
+        <li><a href="style.css">style.css</a> &mdash; CSS variables for dark/light themes, smooth transitions on cards and buttons (Intermediate Extension).</li>
+      </ul>
+    </section>
+
+    <!-- Practical 5 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">📝 Practical 5: Student Registration Form &amp; Validation</h3>
+        <span class="source-badge">Practical 5</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Frontend validation with HTML5 input types, regular expressions, password strength meter, and Canvas CAPTCHA.</p>
+      <ul>
+        <li><a href="register.html">register.html</a> &mdash; Complete student registration form with name, email, mobile, password, confirm password, course, year, gender, terms checkbox, and <strong>Canvas CAPTCHA</strong>.</li>
+        <li><a href="script.js">script.js (Section 7)</a> &mdash; Real-time field validation on keyup/input (Intermediate Extension), dynamic <strong>Password Strength Meter</strong> bar, and HTML5 <strong>Canvas CAPTCHA</strong> generator/verifier (Advanced Extension).</li>
+      </ul>
+    </section>
+
+    <!-- Practical 6 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🌐 Practical 6: Fetch API Dynamic Rendering, Search &amp; Filter</h3>
+        <span class="source-badge">Practical 6</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Asynchronous data consumption with search, category filtering, multi-field sorting, pagination, and localStorage caching.</p>
+      <ul>
+        <li><a href="events.html">events.html (Events Directory)</a> &mdash; Dynamic cards from <code>events.json</code> with live search, category filter, date/capacity sorting, and pagination.</li>
+        <li><a href="students.html">students.html (Student Directory)</a> &mdash; Dynamic profiles with <strong>Dependent Location Dropdowns (Country &rarr; State &rarr; City)</strong> (Intermediate Extension) and CGPA sorting.</li>
+        <li><a href="faq.html">faq.html (University FAQ)</a> &mdash; Asynchronous accordion views rendered from <code>faqs.json</code> with live search and category filter.</li>
+        <li><a href="dashboard.html">dashboard.html</a> &mdash; Aggregated counts and dynamic preview cards loaded via Fetch API.</li>
+        <li><code>data/events.json</code>, <code>data/students.json</code>, <code>data/faqs.json</code> (16 records each &gt; 15 required) &amp; <code>data/locations.json</code>.</li>
+      </ul>
+    </section>
+
+    <!-- Practical 7 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🐘 Practical 7: PHP Form Processing &amp; File Storage (CSV/JSON)</h3>
+        <span class="source-badge">Practical 7</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Server-side validation, data sanitization, safe CSV/JSON storage, and CSRF token verification.</p>
+      <ul>
+        <li><a href="contact.php">contact.php</a> &mdash; Contact inquiry form protected by <strong>CSRF Token</strong> (Advanced Extension), plus live table displaying stored records (Intermediate Extension).</li>
+        <li><a href="process.php">process.php</a> &mdash; POST processor that validates server-side inputs with regex and filter_var, verifies CSRF token, and safely appends records to CSV and JSON.</li>
+        <li><code>data/records.csv</code> &amp; <code>data/records.json</code> &mdash; Persistent file-based storage targets.</li>
+        <li><a href="contact.html">contact.html</a> &mdash; Static contact information and location directions.</li>
+      </ul>
+    </section>
+
+    <!-- Practical 8 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🗄️ Practical 8: MySQL Schema Design, ER Model, PDO &amp; Stored Procedures</h3>
+        <span class="source-badge">Practical 8</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Normalized relational database schema (Students, Events, Registrations), secure PDO connection, and stored procedures.</p>
+      <ul>
+        <li><a href="test_db.php">test_db.php</a> &mdash; Live verification test dashboard demonstrating PDO connection, prepared statements, and stored procedure execution (Screenshot-ready for lab submission).</li>
+        <li><a href="schema.sql">schema.sql</a> &mdash; Complete SQL dump file containing table definitions (3NF normalized), foreign keys, seed data, and stored procedures for phpMyAdmin.</li>
+        <li><a href="db.php">db.php</a> &mdash; Secure PHP PDO singleton connection with exception handling and native prepared statements.</li>
+        <li><a href="setup.php">setup.php</a> &mdash; Automated database initialization script for CLI and XAMPP.</li>
+        <li><a href="students_api.php">students_api.php</a> &mdash; Secure database-backed REST API for student records.</li>
+      </ul>
+    </section>
+
+    <!-- Practical 9 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🛡️ Practical 9: Secure Registration, Duplicate Email Check &amp; Password Hashing</h3>
+        <span class="source-badge">Practical 9</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Secure user registration inserting records into MySQL using PDO prepared statements, checking duplicate email, password hashing, and audit logging.</p>
+      <ul>
+        <li><a href="register.php">register.php</a> &mdash; Secure backend registration form with duplicate email verification (<code>SELECT id FROM users WHERE email = ?</code>), <code>password_hash()</code>, and quick-fill test case helpers for valid, duplicate, and invalid test reporting.</li>
+        <li><code>auth.php</code> (<code>logAudit()</code>) &mdash; Advanced Extension: Cryptographic CSRF token validation and automated audit logging to <code>audit_logs</code> database table &amp; <code>data/registration_audit.log</code>.</li>
+      </ul>
+    </section>
+
+    <!-- Practical 10 -->
+    <section class="card mb-20">
+      <div class="section-header-flex">
+        <h3 style="margin: 0;">🔐 Practical 10: Secure Login/Logout, RBAC, Session Timeout &amp; Remember-Me</h3>
+        <span class="source-badge">Practical 10</span>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:4px;">Secure authentication with <code>password_verify()</code>, session fixation prevention via <code>session_regenerate_id()</code>, role-based dashboards, 15-minute inactivity timeout, and random selector/validator remember-me tokens.</p>
+      <ul>
+        <li><a href="login.php">login.php</a> &mdash; Secure authentication form with quick-fill test accounts, timeout notice, logout notice, and 30-day Remember-Me checkbox.</li>
+        <li><a href="student-dashboard.php">student-dashboard.php</a> &mdash; Student portal dashboard displaying last-login timestamp, active session ID, simulated timeout button, and unauthorized access test button.</li>
+        <li><a href="admin-dashboard.php">admin-dashboard.php</a> &mdash; Administrator control center displaying last-login timestamp and live registration/auth audit log entries.</li>
+        <li><a href="logout.php">logout.php</a> &mdash; Secure POST logout handler with CSRF token verification that clears remember cookies and destroys sessions.</li>
+        <li><code>auth.php</code> (<code>requireRole()</code>) &mdash; Blocks unauthorized dashboard access and renders a screenshot-ready 403 Forbidden screen.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Site map for the CHARUSAT portal • Practical 6</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

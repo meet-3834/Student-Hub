@@ -1,0 +1,8 @@
+[2026-10-20 10:31:08] IP: 127.0.0.1 | Email: scholar1792485066121@charusat.edu.in | Action: USER_REGISTRATION | Status: SUCCESS | New student account created for Demo Scholar 1792485066121
+[2026-10-20 10:31:44] IP: 127.0.0.1 | Email: student@charusat.edu.in | Action: USER_REGISTRATION | Status: FAILED | Duplicate email check failed
+[2026-10-20 10:32:05] IP: 127.0.0.1 | Email: invalid.case@charusat.edu.in | Action: USER_REGISTRATION | Status: FAILED | Password mismatch
+[2026-10-20 10:50:26] IP: 127.0.0.1 | Email: 25dce100@charusat.edu.in | Action: LOGIN_ATTEMPT | Status: FAILED | Invalid password or unknown email
+[2026-10-20 10:50:32] IP: 127.0.0.1 | Email: student@charusat.edu.in | Action: LOGIN_ATTEMPT | Status: SUCCESS | User authenticated with role 'student'
+[2026-10-20 10:50:56] IP: 127.0.0.1 | Email: admin@charusat.edu.in | Action: LOGIN_ATTEMPT | Status: SUCCESS | User authenticated with role 'admin'
+[2026-10-20 10:52:16] IP: 127.0.0.1 | Email: 25dce100@charusat.edu.in | Action: LOGIN_ATTEMPT | Status: FAILED | Invalid password or unknown email
+[2026-10-20 10:52:34] IP: 127.0.0.1 | Email: student@charusat.edu.in | Action: LOGIN_ATTEMPT | Status: SUCCESS | User authenticated with role 'student'

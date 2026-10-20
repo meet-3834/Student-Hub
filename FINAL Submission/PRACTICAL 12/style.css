@@ -1,0 +1,58 @@
+body {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #222;
+    font: 16px/1.5 Arial, sans-serif;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+input, textarea, select, button {
+    padding: .5rem;
+    font: inherit;
+}
+
+label {
+    display: block;
+    margin: .75rem 0;
+}
+
+label input, label textarea, label select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: .6rem;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: top;
+}
+
+img.poster {
+    max-width: 100px;
+    max-height: 80px;
+}
+
+.message {
+    padding: .75rem;
+    background: #eee;
+}
+
+.error {
+    color: #a00;
+}
+
+.inline {
+    display: inline;
+}

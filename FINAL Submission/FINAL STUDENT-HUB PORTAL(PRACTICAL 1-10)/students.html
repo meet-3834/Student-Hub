@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Student Profiles — CHARUSAT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">CHARUSAT</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="students.html" class="active">Students</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="register.html">Register</a>
+        <a href="contact.php">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="sitemap.html">Site Map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="studentAdminTools" class="card mb-20" hidden>
+      <h2>Administrator: Manage Student Records</h2>
+      <p>Add student records or select an existing profile below to edit it. Student accounts can view records only.</p>
+      <form id="studentAdminForm" class="auth-form">
+        <input type="hidden" name="recordId">
+        <div class="filter-row">
+          <label class="filter-group">Roll number<input class="form-control" name="rollNo" maxlength="32" required></label>
+          <label class="filter-group">Name<input class="form-control" name="name" maxlength="120" required></label>
+          <label class="filter-group">Department<input class="form-control" name="department" maxlength="120" required></label>
+          <label class="filter-group">Semester<input class="form-control" name="semester" type="number" min="1" max="20" required></label>
+          <label class="filter-group">CGPA<input class="form-control" name="cgpa" type="number" min="0" max="10" step="0.01" required></label>
+          <label class="filter-group">Email<input class="form-control" name="email" type="email" maxlength="190" required></label>
+          <label class="filter-group">Country<input class="form-control" name="country" maxlength="80" required></label>
+          <label class="filter-group">State<input class="form-control" name="state" maxlength="80" required></label>
+          <label class="filter-group">City<input class="form-control" name="city" maxlength="80" required></label>
+          <label class="filter-group">Skills (comma separated)<input class="form-control" name="skills" maxlength="500"></label>
+          <label class="filter-group">Status<input class="form-control" name="status" maxlength="24" required></label>
+        </div>
+        <p id="studentAdminMessage" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit">Save Student</button>
+        <button class="btn btn-outline" type="reset">Clear Form</button>
+      </form>
+    </section>
+    <div class="page-title-section">
+      <h2>Student Profiles Directory</h2>
+      <p class="subtitle">
+        Student records are available to signed-in students and administrators. Only administrators can add or edit records.
+      </p>
+    </div>
+
+    <!-- Intermediate Extension: Dependent Country -> State -> City Dropdowns -->
+    <section class="card filter-card mb-20">
+      <div class="filter-header">
+        <h3 class="filter-title">🌍 Intermediate Extension: Dependent Location Filter</h3>
+        <button type="button" id="resetLocationBtn" class="btn btn-sm btn-outline">Reset Location</button>
+      </div>
+      <p class="filter-subtitle">Select a country to populate states, then select a state to populate cities.</p>
+      
+      <div class="filter-row dependent-row">
+        <div class="filter-group">
+          <label for="countrySelect">1. Country</label>
+          <select id="countrySelect" class="form-control">
+            <option value="">All Countries</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="stateSelect">2. State</label>
+          <select id="stateSelect" class="form-control" disabled>
+            <option value="">Select Country First</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="citySelect">3. City</label>
+          <select id="citySelect" class="form-control" disabled>
+            <option value="">Select State First</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search, Department Filter, Sort Controls -->
+    <section class="card filter-card mb-20">
+      <div class="filter-row">
+        <!-- Search Input -->
+        <div class="filter-group flex-2">
+          <label for="studentSearch">Search Students</label>
+          <div class="search-input-wrapper">
+            <input type="text" id="studentSearch" class="form-control" placeholder="Search by name, roll no, or skill...">
+            <button type="button" id="clearStudentSearch" class="clear-input-btn" title="Clear search">&times;</button>
+          </div>
+        </div>
+
+        <!-- Department Filter -->
+        <div class="filter-group">
+          <label for="deptFilter">Department</label>
+          <select id="deptFilter" class="form-control">
+            <option value="">All Departments</option>
+          </select>
+        </div>
+
+        <!-- Sort Option -->
+        <div class="filter-group">
+          <label for="studentSort">Sort By</label>
+          <select id="studentSort" class="form-control">
+            <option value="name-asc">Name (A to Z)</option>
+            <option value="name-desc">Name (Z to A)</option>
+            <option value="cgpa-desc">CGPA (High to Low)</option>
+            <option value="cgpa-asc">CGPA (Low to High)</option>
+            <option value="semester-desc">Semester (High to Low)</option>
+          </select>
+        </div>
+
+        <!-- Refresh / Reset -->
+        <div class="filter-group filter-actions">
+          <label>&nbsp;</label>
+          <button type="button" id="refreshStudentsBtn" class="btn btn-outline" title="Reload protected student records">🔄 Refresh</button>
+        </div>
+      </div>
+
+      <!-- Data Source / Cache Status Badge (Advanced Extension) -->
+      <div class="filter-footer">
+        <span id="studentsDataSource" class="source-badge">Checking access...</span>
+        <span id="studentsCountText" class="count-text"></span>
+      </div>
+    </section>
+
+    <!-- Student Cards Grid -->
+    <div id="studentsContainer" class="students-grid">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading student profiles...</p>
+      </div>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div id="studentsPagination" class="pagination-container mt-20"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>CHARUSAT Student Directory • Practical 6 Fetch API</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

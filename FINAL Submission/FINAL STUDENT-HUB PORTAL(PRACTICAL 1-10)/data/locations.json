@@ -1,0 +1,22 @@
+{
+  "India": {
+    "Gujarat": ["Ahmedabad", "Vadodara", "Anand", "Changa", "Surat"],
+    "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+    "Karnataka": ["Bengaluru", "Mysuru", "Mangalore"]
+  },
+  "USA": {
+    "California": ["San Jose", "San Francisco", "Los Angeles"],
+    "Texas": ["Austin", "Dallas", "Houston"],
+    "Washington": ["Seattle", "Redmond"]
+  },
+  "Germany": {
+    "Bavaria": ["Munich", "Nuremberg"],
+    "Berlin": ["Berlin"],
+    "Hesse": ["Frankfurt"]
+  },
+  "Canada": {
+    "Ontario": ["Toronto", "Ottawa"],
+    "British Columbia": ["Vancouver", "Victoria"],
+    "Quebec": ["Montreal"]
+  }
+}
